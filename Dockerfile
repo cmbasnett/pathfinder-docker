@@ -40,7 +40,7 @@ RUN apt-get install -y \
 ARG VERSION
 RUN mkdir /var/www/pathfinder
 RUN mkdir /var/log/cron-www/
-RUN git clone --branch $VERSION https://github.com/exodus4d/pathfinder.git /var/www/pathfinder
+RUN git clone --branch $VERSION https://github.com/cmbasnett/pathfinder.git /var/www/pathfinder
 COPY ./config/composer.json /root/.composer/config.json
 RUN chown -R www-data:www-data /var/www/pathfinder
 RUN mkdir /tmp/cache/
